@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    src: url(pre/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    src: url(pre/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    src: url(pre/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    src: url(pre/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    src: url(pre/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    src: url(pre/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    src: url(pre/Pretendard-Light.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    src: url(pre/Pretendard-ExtraLight.woff) format('woff');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    src: url(pre/Pretendard-Thin.woff) format('woff');
+}
+
+body{
+    font-family: "Pretendard";
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+.font-24-sb{
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav{
+    width: 1686px;
+    margin: auto;
+    padding: 23px 0;
+    justify-content: space-between;
+}
+
+.navi{
+    gap:0 50px; /*display-grid, display-flex에만 적용되는 속성*/
+    /*gap 속성은 자녀 요소들이 일정한 간격을 줌
+      gap은 상하좌우의 모든 갭을 동시에 설정하거나, 상하-좌우의 갭을 설정*/
+}
+
+.navi a{
+    text-decoration: none;
+    color: #000;
+}
+
+.icon ul{
+    gap: 0 8px;
+}
+
+.none{
+    display: none;
+}
+/*모바일버전에서 보이지 않는 아이콘을 안 보이게 해줌*/
+
+img{
+    width: 100%;
+}
+
+
+
+
+
+
+/*반응형 만들기(PC,Ta,Mo)*/
+@media(max-width:1920px){   
+
+   /*1773px까지 100%로 보여줄거임, 더 작아지면 스크롤이 생성됨*/
+     /*크기가 줄어들면 글자가 너무 딱 달라붙어서 패딩을 줌*/
+
+
+    img{
+        width: 100%;
+    }
+}
+
+
+@media(max-width:1280px){
+    .pc{
+        display: none;     /*반응형에서 모바일에서 없앨 아이콘을 none함*/
+    }
+
+    .navi{
+        gap:0 20px;  /*크기가 줄어들면 gnb간 간격도 줄어들게 함*/
+    }
+
+    nav{
+        justify-content: space-between;
+        padding: 24px 0;
+        /*gap: 0 132px;*/
+        width: 90%; 
+    }
+
+    .font-24-sb{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:768px){
+    .navi{
+        display: none;
+    }
+
+    .none{
+        display: block;  /*전체 html에서 없앴던 아이콘을 다시 나오게 하는 속성*/
+    }
+
+   
+}
+
+
+
+
+@media(max-width:576px){
+    .navi{
+        display: none;
+    }
+
+    .none{
+        display: block;  /*전체 html에서 없앴던 아이콘을 다시 나오게 하는 속성*/
+    }
+
+   
+}
+
+/*
+@media(min-width:600px){    *600px도달되어 넘어가면 흰색(600px전이면 블루)*
+    body{
+        background-color: blue;
+    }
+}
+
+@media only screen and(max-width:600px){ *가로값이 600px보다 작은 화면에 사용*
+    *지금은 only screen 사용X, 지금은 그냥 값 입력해도 됨*
+}
+
+@media (min-width:768px) and  *768px~1024px는 태블릿 사이즈*
+        (max-width:1024px){    *768px~1024px까지는 밑에 속성을 적용*
+        body{
+              background-color: blue;
+    }
+}
+*/
+

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*box-sizing 속성은 요소의 전체 너비와 높이를 어떻게 계산하는지 설정
+    box-sizing: content-box는 margin, padding을 넣으면
+                기존 width에 +margin,padding 으로 계산
+                border-box는 기존 width값에 포함*/
+}
+
+body{
+    display: flex;
+    justify-content: center; /*가운데 정렬*/
+    align-items: center;
+    min-height: 100vh;
+    /*100vh는 부모 태그와는 상관없이 보이는 Viewport
+      Height의 100%를 다 쓰겠다는 의미
+      100%는 부모 태그의 100%를 사용한다는 의미
+        >부모 태그가 화면의 50%라면, 자식 태그를 100%로 설정하더라도 이것은 부모 태그가 지정한 50%를 100% 보여준다는 뜻 */
+    /*min-width(height)는 최소 너비(높이)보다 작아지는
+                          것을 방지,
+       ex.min-width(height) 100px- 최소 100px보다 작아지지X
+                        100vh는 화면크기보다 작아지지X??*/
+    background: url(./assets/images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    /*배경화면 글래스모피즘처럼 블러처리*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    /*input-box i에서 아이콘조정을 위해
+       wrapper 안에 input-box을 부모영역으로 설정함*/
+    width: 100%;
+    height: 50px;
+    /*background : salmon; 구분하기 위해 넣음*/
+    margin: 30px 0; /*위,아래 margin 30px*/
+
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /*배경색이 투명(없어지도록)하게 하는 태그
+      none은 이미지가 없어지도록하는 태그이고
+      transparent는 배경색이 없어지도록하는 태그*/
+    border: none;
+    outline: none;
+    border : 2px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+/*::placeholder는 의사 요소라서 **::(콜론 두 개)**를 사용해야 해.
+반면에 :hover, :focus 같은 건 의사 클래스라서 **:(콜론 한 개)**만 사용해.*/
+.input-box input::placeholder{
+    color: #FFF;
+}
+
+.input-box i{
+    position: absolute;    
+    /*absolute를 쓰려면 부모영역이 있어야함*/
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    /*가운데 정렬할때 사용하는 태그,
+      Y축으로 -50%(위로 올린다),
+      top: 50%(이게 부모영역)*/ 
+    font-size: 20px;
+    /*아이콘을 폰트로 가져왔기에 font-size로 조정*/
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    /*checkbox 클릭 시, 기본색은 파랑
+      accent-color : #fff을 줌으로써 흰색으로 변경*/
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    /*border는 옵션의 두께만큼 박스의 전체 크기도 늘어남
+      outline은 박스의 크기를 늘리는 게 아니라 단지 테두리만
+                생기는 것(레이아웃에 영향 X)*/
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    /*마우스 모양을 pointer로 바꿔줌*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /*box-shadow: x축 y축 blur spread color*/
+    font-weight: 600;
+    color: #333;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.wrapper .register-link a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper .register-link p a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--boxicons 해외아이콘 사이트-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <!--form input태그를 사용하려면 formd을 사용하는 것이 좋음-->
+        <form action=""> 
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+                <!--disabled text 입력 못하도록 비활성화-->
+                <!--required 값을 무조건 입력해야하는부분(ex.필수)-->
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock' ></i>
+            </div>
+            <div class="remember-fotgot">
+                <label for="">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn" onclick="alert('바보바보바보')">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!--<section class="babo">
+        <h1>viewport</h1>
+    </section>-->
+</body>
+</html>
